@@ -9,9 +9,9 @@ print("-What is the shorter route to Fairfield, Iowa, based on the two routes gi
 
 print("-Let's Look at the Route Info Going Through Indianapolis, Indiana-")
 # 1st lets use the imported 'pandas' to import our data in the file "Through_Indianapolis.csv"
-indianapolis = pd.read_csv("Iowa Trip Files/Through_Indianapolis.csv")
+indianapolis = pd.read_csv("Through_Indianapolis.csv")
 # We can also import the Nashville route data, but we'll focus on Indianapolis for now
-nashville = pd.read_csv("Iowa Trip Files/Through_Nashville.csv")
+nashville = pd.read_csv("Through_Nashville.csv")
 # Not a necessary step but I print the '.head()' of the newly imported information,
 # which is stored in a DataFrame upon pandas 'reading' the CSV file path given.
 print(indianapolis.head())
