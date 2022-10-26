@@ -77,6 +77,7 @@ print("\n-Cumulative Distance and Time going through df_1:\n" + str(df_1_distanc
       "\n-Cumulative Distance and Time going through df_2:\n" + str(df_2_distance))
 df_2_df_1 = pd.merge(df_1_distance, df_2_distance, left_index=True, right_index=True, suffixes=('_df_1', '_df_2'))
 print(df_2_df_1)
+# For some reason the merge would not work without the 'left_index' and 'right_index'
 
 # The moment we have done all this work for up to this point. We are about to answer our initial question.
 # We can do this by comparing the data we have pulled from each plot separately on the same graph.
