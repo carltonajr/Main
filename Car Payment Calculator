@@ -1,0 +1,109 @@
+import math
+n_a = "If this does not apply, input 0"
+
+print("Welcome to the Car Payment Calculator")
+print("**Don't use any commas for your number values**")
+
+print("-Which vehicle are you looking to purchase?\n"
+      "Valid Year Range: 1980 - 2023")
+year = input("Year: ")
+if not year.isnumeric():
+    raise TypeError("Please use numbers only for the year value")
+else:
+    year = int(year)
+if year > 2023 or year < 1980:
+    raise ValueError("Please use the valid production year range")
+
+make = input("-Make: ")
+model = input("-Base Model: ")
+print("-Press 'enter' if no special version")
+special_form = input("Special Version(If applicable): ")
+car = year, make, model, special_form
+
+if not len(special_form) == 0:
+    car = year, make, model
+
+print("-What is the listing price of the", model, "?")
+listed_price = input("$")
+
+if not listed_price.isnumeric():
+    raise ValueError("Use only numbers for year")
+else:
+    listed_price = float(listed_price)
+
+print("-What is the documentation fee for your state?")
+docs_fees = input("$")
+
+if not docs_fees.isnumeric():
+    raise ValueError("Use only numbers for year")
+else:
+    docs_fees = float(docs_fees)
+
+print("-Input the sales tax percentage in your state:")
+print(n_a)
+sales_tax = input()
+
+if not sales_tax.isnumeric():
+    raise ValueError("Use only numbers for year")
+else:
+    sales_tax = float(sales_tax)/100
+
+listed_docs = listed_price + docs_fees
+total_price = ()
+if sales_tax == 0:
+    total_price = listed_docs
+    total_price = "{:.2f}".format(total_price)
+else:
+    total_price = float((listed_docs * sales_tax) + listed_docs)
+    total_price = float("{:.2f}".format(total_price))
+
+
+print("-The estimated cash price with for the ", car,
+      " with listing, documentation, and sales tax would be around \n$", total_price)
+print("")
+
+print("-If planning to make a down payment, input it here:")
+print(n_a)
+down_pay = input("")
+
+print("-How many months were you planning to finance this purchase?")
+print(n_a)
+finance = input("")
+month_pay = ()
+if not down_pay.isnumeric() or finance.isnumeric():
+    finance = float(finance)
+    down_pay = float(down_pay)
+else:
+    raise TypeError("Please use numbers for input")
+
+if down_pay < 0 or finance < 0:
+    raise ValueError("Please use positive numbers for input")
+elif down_pay == 0:
+    month_pay = total_price / float(finance)
+elif finance == 0:
+    month_pay = float(total_price - float(down_pay))
+else:
+    month_pay = float(total_price - down_pay) / finance
+
+print("-With the given information, the ", car, "has an estimated monthly payment of ", month_pay)
+print("**Estimate not including possible interest**")
+
+print("This section allows you to estimate how much the given payment would take up of your monthly and yearly budget:")
+print("Input your estimated yearly income:")
+yearly = input()
+
+
+if yearly.isnumeric():
+    yearly = float(yearly)
+    yearly = float("{:.2f}".format(yearly))
+else:
+    raise TypeError("Please use numbers for input")
+
+if yearly < 0:
+    raise ValueError("Please use positive numbers for input")
+else:
+    yearly_price = month_pay * 12
+    yearly_budget = (yearly_price/yearly) * 100
+
+print("Based on your input the", car,
+      "would be between\n", math.floor(yearly_budget), "&", math.ceil(yearly_budget), " % of your yearly income")
