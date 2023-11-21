@@ -1,83 +1,110 @@
-Episode,Title,Length(mins),Views,Ep Set
-7,Fashion Nova,29,2784,1
-8,Barber Shop Talk Pt.I,41,2681,1
-9,Barber Shop Talk Pt.II,26,2497,1
-10,Fed's Watching,26,1832,1
-11,LOADED,25,1069,2
-12,EVOL,15,1706,2
-13,Pandemic Awards,27,1880,2
-14,Residuals,28,2350,2
-15,HUSTLE,19,934,2
-16,Robinhood,24,870,2
-17,All Star,22,987,2
-18,Going Bananas,25,1749,2
-19,"Want Me To Be",24,1778,2
-20,ATL Crazy,23,2223,2
-21,Barber Shop Talk Pt.III,29,2276,3
-22,Breaking News,32,1707,3
-23,Nerf Guns,20,1666,3
-24,"Have Y'all Heard",24,2353,3
-25,Ignorant Folks,22,1839,3
-26,Personal Shopper,24,2300,3
-27,"Men",25,3239,3
-28,PORSHA,36,2080,3
-29,Barber Shop Talk Pt.IV,28,1519,3
-30,Anniversary,27,2286,3
-31,BABY,29,6520,4
-32,Down In The South,28,1917,4
-33,Double Homicide,25,1563,4
-34,Detective,26,1535,4
-35,Dine and Dash,23,2144,4
-36,Turkey Leg Hut,15,2047,4
-37,GET THAT BAG,31,1717,4
-38,Fighting Demons,33,1878,4
-39,Burdened w/ Greatness Album Review,23,2339,4
-40,MUSIC & SEX,25,2062,4
-41,Lottery,23,1915,5
-42,Bills,18,1734,5
-43,WEIRD TO ME,20,1834,5
-44,Fights,27,1801,5
-45,First Date,11,3334,5
-46,HALFTIME,23,1744,5
-47,GOOD REPOUR,22,1645,5
-48,BROKE & PREGNANT,20,1679,5
-49,Cheating,24,1439,5
-50,BIG 50,37,1247,5
-51,Jordan's,18,3654,6
-52,2nd Annual Pandemic Awards,38,1486,6
-53,Choking Your Timbs,17,1553,6
-54,Halle Berry,26,1512,6
-55,Obsessed,31,1539,6
-56,STRIP CLUB,27,1509,6
-57,No Teeth,13,1385,6
-58,Wild 'N Out,28,1957,6
-59,Sneaky Link,26,1830,6
-60,Reformed,25,1720,6
-61,How Much A Gallon?,40,1675,7
-62,Divorce,20,2045,7
-63,WHO IS REEF,28,3226,7
-64,Communication,26,2199,7
-65,Fake Weed,36,1899,7
-66,TruthTeller,23,1762,7
-67,HOME,30,3410,7
-68,Down Bad,34,1931,7
-69,ABODE,42,2589,7
-70,Rude N Reckless,39,1446,7
-71,NO KIDS!,33,1359,8
-72,Casket Fresh,51,1004,8
-73,Alcoholic,39,2744,8
-74,BOAT LIFE,32,1763,8
-75,Breaking In,50,2178,8
-76,Mega Millions,30,1349,8
-77,Pretty Feet,40,2102,8
-78,Spirit Airlines,32,1972,8
-79,Certified Trick,32,1792,8
-80,Grand Slams,34,948,8
-81,No Hands,34,885,9
-84,RICO,35,975,9
-85,Fighting Demons,27,3104,9
-86,Low Vibrations,25,440,9
-87,Kyrie,43,80,9
-88,Go All The Way Pt I,31,990,9
-89,Go All The Way Pt II,17,870,9
-90,Chrimuh,27,863,9
+Episode,Title,Length,Views,Ep_Set,Guest,Release Date
+Bonus I,McDonalds,20,1753,0,N,Jan 13 2021
+Bonus II,VITAL HONEY,19,5702,0,N,Jan 27 2021
+Bonus III,CUT,17,913,0,N,Mar 3 2021
+Bonus IV,Don't Fold,16,1249,0,N,May 5 2021
+Bonus V,State Fair,11,1356,0,N,May 12 2021
+Bonus VI,PPP JAIL,12,916,0,N,May 26 2021
+Bonus VII,EYE OF FIRE,14,995,0,N,Jul 7 2021
+Bonus VIII,WHAT'S YOUR DRUNK NAME?,33,4711,0,N,Aug 4 2023
+Bonus IX,No Rubber,25,4561,0,N,Aug 18 2023
+7,Fashion Nova,29,2809,1,Y,Nov 18 2020
+8,Barber Shop Talk Pt.I,41,2720,1,N,Nov 25 2020
+9,Barber Shop Talk Pt.II,26,2511,1,N,Dec 2 2020
+10,Fed's Watching,26,1832,1,N,Dec 9 2020
+11,LOADED,25,1069,2,N,Dec 16 2020
+12,EVOL,15,1706,2,Y,Dec 23 2020
+13,Pandemic Awards,27,1880,2,N,Dec 30 2020
+14,Residuals,28,2350,2,Y,Jan 6 2021
+15,HUSTLE,19,934,2,N,Jan 20 2021
+16,Robinhood,24,870,2,N,Feb 3 2021
+17,All Star,22,987,2,N,Feb 10 2021
+18,Going Bananas,25,1749,2,N,Feb 17 2021
+19,"Want Me To Be",24,1778,2,N,Feb 24 2021
+20,ATL Crazy,23,2223,2,N,Mar 10 2021
+21,Barber Shop Talk Pt.III,29,2276,3,N,Mar 17 2021
+22,Breaking News,32,1707,3,N,Mar 24 2021
+23,Nerf Guns,20,1666,3,N,Mar 31 2021
+24,"Have Y'all Heard",24,2353,3,N,Apr 7 2021
+25,Ignorant Folks,22,1839,3,N,Apr 14 2021
+26,Personal Shopper,24,2300,3,N,Apr 21 2021
+27,"Men",25,3239,3,N,Apr 28 2021
+28,PORSHA,36,2080,3,N,May 19 2021
+29,Barber Shop Talk Pt.IV,28,1519,3,N,Jun 2 2021
+30,Anniversary,27,2286,3,N,Jun 9 2021
+31,BABY,29,6520,4,Y,Jun 16 2021
+32,Down In The South,28,1917,4,N,Jun 23 2021
+33,Double Homicide,25,1563,4,N,Jun 30 2021
+34,Detective,26,1535,4,N,Jul 21 2021
+35,Dine and Dash,23,2144,4,N,Jul 28 2021
+36,Turkey Leg Hut,15,2047,4,N,Aug 4 2021
+37,GET THAT BAG,31,1717,4,N,Aug 11 2021
+38,Fighting Demons,33,1878,4,N,Aug 18 2021
+39,Burdened w/ Greatness Album Review,23,2339,4,N,Sep 1 2021
+40,MUSIC & SEX,25,2062,4,N,Sep 8 2021
+41,Lottery,23,1915,5,N,Sep 15 2021
+42,Bills,18,1734,5,N,Sep 22 2021
+43,WEIRD TO ME,20,1834,5,N,Sep 29 2021
+44,Fights,27,1801,5,N,Oct 6 2021
+45,First Date,11,3347,5,Y,Oct 13 2021
+46,HALFTIME,23,1744,5,N,Oct 20 2021
+47,GOOD REPOUR,22,1645,5,N,Oct 27 2021
+48,BROKE & PREGNANT,20,1679,5,N,Nov 3 2021
+49,Cheating,24,1439,5,N,Nov 10 2021
+50,BIG 50,37,1247,5,N,Nov 17 2021
+51,Jordan's,18,3654,6,N,Dec 8 2021
+52,2nd Annual Pandemic Awards,38,1498,6,N,Dec 22 2021
+53,Choking Your Timbs,17,1553,6,N,Jan 12 2022
+54,Halle Berry,26,1512,6,N,Jan 26 2022
+55,Obsessed,31,1539,6,N,Feb 2 2022
+56,STRIP CLUB,27,1509,6,N,Feb 9 2022
+57,No Teeth,13,1385,6,N,Feb 16 2022
+58,Wild 'N Out,28,1957,6,N,Feb 19 2022
+59,Sneaky Link,26,1830,6,N,Feb 23 2022
+60,Reformed,25,1720,6,N,Mar 2 2022
+61,How Much A Gallon?,40,1675,7,N,Mar 10 2022
+62,Divorce,20,2045,7,N,Mar 23 2022
+63,WHO IS REEF,28,3226,7,Y,Mar 30 2022
+64,Communication,26,2199,7,N,Apr 6 2022
+65,Fake Weed,36,1899,7,N,Apr 21 2022
+66,TruthTeller,23,1762,7,N,Apr 28 2022
+67,HOME,30,3410,7,N,May 25 2022
+68,Down Bad,34,1931,7,N,Jun 1 2022
+69,ABODE,42,2589,7,N,Jun 9 2022
+70,Rude N Reckless,39,1446,7,Y,Jun 16 2022
+71,NO KIDS!,33,1359,8,N,Jun 23 2022
+72,Casket Fresh,51,1004,8,N,Jun 30 2022
+73,Alcoholic,39,2744,8,N,Jul 7 2022
+74,BOAT LIFE,32,1763,8,N,Jul 14 2022
+75,Breaking In,50,2178,8,N,Jul 28 2022
+76,Mega Millions,30,1349,8,N,Aug 4 2022
+77,Pretty Feet,40,2102,8,N,Aug 11 2022
+78,Spirit Airlines,32,1983,8,N,Aug 18 2022
+79,Certified Trick,32,1803,8,N,Aug 25 2022
+80,Grand Slams,34,1017,8,N,Sep 8 2022
+81,No Hands,34,898,9,N,Sep 22 2022
+84,RICO,35,984,9,N,Oct 20 2022
+85,Fighting Demons,27,3132,9,N,Oct 27 2022
+86,Low Vibrations,25,461,9,N,Nov 3 2022
+87,Kyrie,43,95,9,N,Nov 25 2022
+88,Go All The Way Pt. I,31,1019,9,N,Dec 2 2022
+89,Go All The Way Pt. II,17,884,9,N,Dec 16 2022
+90,Chrimuh,27,760,9,N,Dec 24 2022
+91,SPIT,24,678,10,N,Jan 19 2023
+92,Chrisley Doesn’t Know Best,24,678,10,N,Jan 26 2023
+93,How Much?,52,65,10,N,Feb 2 2023
+94,Tory Lanez: What Really Happened?,56,673,10,N,Feb 9 2023
+95,Netflix Dead?,53,828,10,N,Feb 23 2023
+96,Scandals + Murders = Alex Murdaugh Pt. I,33,804,10,N,Mar 9 2023
+97,Alex Murdaugh Pt. II,37,632,10,N,Mar 17 2023
+98,BEEF ALERT!!!!!!!!!,67,908,10,Y,Mar 30 2023
+99,SWV Vs XSCAPE,32,1091,10,Y,Apr 7 2023
+100,MASTERPLAN,81,10555,10,Y,Apr 22 2023
+101,Unmasking Controversy,42,5213,11,N,Jul 7 2023
+102,DUI/ Brawls/ & Backlash,66,5293,11,Y,Jul 14 2023
+103,Landlord,61,5755,11,N,Jul 22 2023
+104,BEAT THE SUN,53,5846,11,N,Jul 29 2023
+105,We Might Get Hit With The R.I.C.O Pt. I,49,4856,11,N,Aug 27 2023
+106,We Might Get Hit With The R.I.C.O Pt. II,42,5404,11,N,Sep 1 2023
+107,High Rocket Power,29,3766,11,N,Sep 28 2023
+108,BIG ZOO,45,5760,11,N,Oct 6 2023
