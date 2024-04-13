@@ -22,10 +22,8 @@ while run:
         label.config(text=clicked.get())
         label.pack()
         year = int(clicked.get())
-        data_path = f"C:/Users/E4D User/Documents/GitHub/Original/Charlotte Talons Data/" \
-                    f"Charlotte Talons {year} Season.csv"
-        info_path = "C:/Users/E4D User/Documents/GitHub/Original/Charlotte Talons Data/" \
-                    "extra_files/Charlotte Talons Championship History.csv"
+        data_path = f"{year}"
+        info_path = ""
         root.destroy()
         info = pd.read_csv(info_path)
         season = pd.read_csv(data_path, index_col='season')
