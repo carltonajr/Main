@@ -1,0 +1,81 @@
+﻿Season,Opponent,Conference,Opp Rank,Ranked Opp?,Top 15 Opp?,Top 10 Opp?,Top 5 Opp?,Stadium Capacity,Traveled Distance (mi),City,Home Team,Time of Season,H Player Score,F Player Score,H Opp Score,F Opp Score,Half Margin,Final Margin
+2008,SC St,FCS,-,N,N,N,N,22000,603,Orangeburg,SC St,Reg Season,42,63,28,60,14,3
+2008,New Hampshire,FCS,-,N,N,N,N,11015,1466,Durham,New Hampshire,Reg Season,59,73,0,3,59,70
+2008,Akron,MAC,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,44,44,0,0,44,44
+2008,Texas A&M,BIG 12,-,N,N,N,N,102733,451,College Station,Texas A&M,Reg Season,41,68,0,10,41,58
+2008,Tulane,C-USA,-,N,N,N,N,76468,186,New Orleans,Tulane,Reg Season,49,91,0,0,49,91
+2008,Louisville,BIG EAST,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,28,63,0,7,28,56
+2008,Buffalo,MAC,-,N,N,N,N,25013,1117,Buffalo,Buffalo,Reg Season,28,35,0,7,28,28
+2008,Louisiana Tech,WAC,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,7,31,0,0,7,31
+2008,Alabama,SEC,19,Y,N,N,N,44215,0,Jackson,Jackson St,Reg Season,6,63,2,2,4,61
+2008,Rice,C-USA,-,N,N,N,N,47000,441,Houston,Rice,Reg Season,38,62,0,0,38,62
+2008,Florida,SEC,7,Y,Y,Y,N,90000,582,Gainesville,Florida,Reg Season,35,84,7,7,28,77
+2008,Southern,INDEPENDENT,-,N,N,N,N,28500,174,New Orleans,SWAC Championship,Post Season,21,45,11,25,10,20
+2008,San Diego St,MW,-,N,N,N,N,47000,437,Fort Worth,Armed Forces Bowl,Bowl Season,56,84,0,0,56,84
+2009,Florida St,ACC,7,Y,Y,Y,N,79560,435,Tallahassee,Florida St,Reg Season,35,70,0,0,35,70
+2009,Arizona St,PAC 12,7,Y,Y,Y,N,44215,0,Jackson,Jackson St,Reg Season,42,89,0,0,42,89
+2009,Michigan,BIG TEN,-,N,N,N,N,107601,932,Ann Arbor,Michigan,Reg Season,42,77,0,0,42,77
+2009,SC St,FCS,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,14,21,17,17,-3,4
+2009,Penn St,BIG TEN,19,Y,N,N,N,106572,1076,University Park,Penn St,Reg Season,54,96,0,0,54,96
+2009,Alabama St,FCS,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,17,31,14,14,3,17
+2009,LSU,SEC,14,Y,Y,N,N,102321,174,Baton Rouge,LSU,Reg Season,41,41,0,3,41,38
+2009,Alcorn St,FCS,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,14,17,0,14,14,3
+2009,Alabama A&M,FCS,-,N,N,N,N,44215,0,Jackson,Jackson St,Reg Season,0,31,13,13,-13,18
+2009,Oklahoma,BIG 12,5,Y,Y,Y,N,86112,591,Norman,Oklahoma,Reg Season,16,65,3,6,13,59
+2009,Ohio St,BIG TEN,1,Y,Y,Y,Y,102082,790,Columbus,Ohio St,Reg Season,28,59,0,0,28,59
+2009,Southern,INDEPENDENT,-,N,N,N,N,44215,0,Jackson,SWAC Championship,Post Season,28,49,3,3,25,46
+2009,Virginia Tech,ACC,1,Y,Y,Y,Y,92542,1849,Pasedena,National Championship,Bowl Season,35,35,3,6,32,29
+2012,Arkansas,SEC,20,Y,N,N,N,76212,269,Fayetteville,Arkansas,Reg Season,14,21,21,33,-7,-12
+2012,Rice,C-USA,-,N,N,N,N,47233,0,Lawrence,Kansas,Reg Season,14,24,7,7,7,17
+2012,TCU,BIG 12,25,Y,N,N,N,47233,0,Lawrence,Kansas,Reg Season,13,33,0,14,13,19
+2012,Northern Illinois,MAC,-,N,N,N,N,24000,504,DeKalb,Northern Illinois,Reg Season,27,34,0,0,27,34
+2012,Kansas St,BIG 12,17,Y,N,N,N,53811,84,Manhattan,Kansas St,Reg Season,7,21,7,19,0,2
+2012,Oklahoma St,BIG 12,-,N,N,N,N,47233,0,Lawrence,Kansas,Reg Season,14,42,14,21,0,21
+2012,Oklahoma,BIG 12,6,Y,Y,Y,N,86112,332,Norman,Oklahoma,Reg Season,28,49,24,39,4,10
+2012,Texas,BIG 12,22,Y,N,N,N,47233,0,Lawrence,Kansas,Reg Season,38,45,7,20,31,25
+2012,Baylor,BIG 12,-,N,N,N,N,45140,600,Waco,Baylor,Reg Season,21,49,3,10,18,39
+2012,Texas Tech,BIG 12,-,N,N,N,N,60454,662,Lubbock,Texas Tech,Reg Season,17,38,14,35,3,3
+2012,Iowa St,BIG 12,-,N,N,N,N,47233,0,Lawrence,Kansas,Reg Season,27,48,14,14,13,34
+2012,West Virginia,BIG 12,24,Y,N,N,N,60000,900,Morgantown,West Virginia,Reg Season,21,49,7,28,14,21
+2012,Rutgers,BIG EAST,21,Y,N,N,N,72200,1189,Glendale,Fiesta Bowl,Bowl Season,23,51,0,10,23,41
+2013,Alabama,SEC,7,Y,Y,Y,N,47233,0,Lawrence,Kansas,Reg Season,28,48,21,38,7,10
+2013,Utah,PAC 12,5,Y,Y,Y,N,47233,0,Lawrence,Kansas,Reg Season,24,34,14,31,10,3
+2013,Michigan,BIG TEN,16,Y,N,N,N,107601,760,Ann Arbor,Michigan,Reg Season,28,42,30,37,-2,5
+2013,West Virginia,BIG 12,-,N,N,N,N,47233,0,Lawrence,Kansas,Reg Season,17,38,17,24,0,14
+2013,Texas Tech,BIG 12,-,N,N,N,N,60454,662,Lubbock,Texas Tech,Reg Season,14,28,3,3,11,25
+2013,Oklahoma,BIG 12,2,Y,Y,Y,Y,86112,332,Norman,Oklahoma,Reg Season,10,52,21,49,-11,3
+2013,Oklahoma St,BIG 12,-,N,N,N,N,55509,284,Stillwater,Oklahoma St,Reg Season,42,91,14,41,28,50
+2013,TCU,BIG 12,2,Y,Y,Y,Y,47233,0,Lawrence,Kansas,Reg Season,28,56,17,38,11,18
+2013,Texas,BIG 12,9,Y,Y,Y,N,105213,701,Austin,Texas,Reg Season,28,66,17,31,11,35
+2013,Kansas St,BIG 12,12,Y,Y,N,N,47233,0,Lawrence,Kansas,Reg Season,28,56,14,21,14,35
+2013,Iowa St,BIG 12,-,N,N,N,N,47233,0,Lawrence,Kansas,Reg Season,35,52,7,17,28,35
+2013,Baylor,BIG 12,-,N,N,N,N,45140,600,Waco,Baylor,Reg Season,21,56,21,35,0,21
+2013,Alabama,SEC,2,Y,Y,Y,Y,92542,1573,Pasedena,National Championship,Bowl Season,38,65,29,51,9,14
+2014,TCU,BIG 12,4,Y,Y,Y,Y,51802,0,College Park,Maryland,Reg Season,30,59,15,42,15,17
+2014,Nebraska,BIG TEN,-,N,N,N,N,85458,1205,Lincoln,Nebraska,Reg Season,56,73,7,21,49,52
+2014,Illinois,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,23,52,14,21,9,31
+2014,Wisconsin,BIG TEN,10,Y,Y,N,N,51082,0,College Park,Maryland,Reg Season,41,71,7,28,34,43
+2014,West Virginia,BIG 12,-,N,N,N,N,60000,209,Morgantown,West Virginia,Reg Season,14,42,20,35,-6,7
+2014,Penn St,BIG TEN,18,Y,N,N,N,106572,199,University Park,Penn St,Reg Season,21,45,3,22,18,23
+2014,Michigan,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,34,47,14,29,20,18
+2014,Ohio St,BIG TEN,8,Y,Y,Y,N,102082,397,Columbus,Ohio St,Reg Season,28,48,7,39,21,9
+2014,Indiana,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,35,77,10,17,25,60
+2014,Rutgers,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,35,42,14,35,21,7
+2014,Alabama,SEC,9,Y,Y,Y,N,100077,814,Tuscaloosa,Alabama,Reg Season,35,77,34,63,1,14
+2014,Michigan St,BIG TEN,5,Y,Y,Y,N,75005,586,East Lansing,Michigan St,Reg Season,42,56,14,49,28,7
+2014,Nebraska,BIG TEN,22,Y,N,N,N,67000,572,Indianapolis,BIG TEN Championship,Post Season,14,49,17,24,-3,25
+2014,South Carolina,SEC,2,Y,Y,Y,Y,72200,2278,Glendale,National Championship,Bowl Season,13,41,17,34,-4,7
+2015,Nebraska,BIG TEN,-,N,N,N,N,85458,1205,Lincoln,Nebraska,Reg Season,48,77,0,21,48,56
+2015,Minnesota,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,20,69,7,21,13,48
+2015,Wisconsin,BIG TEN,12,Y,Y,N,N,80321,844,Madison,Wisconsin,Reg Season,42,77,10,31,32,46
+2015,West Virginia,BIG 12,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,49,112,17,24,32,88
+2015,South Carolina,SEC,12,Y,Y,N,N,51802,0,College Park,Maryland,Reg Season,21,42,7,21,14,21
+2015,Penn St,BIG TEN,-,N,N,N,N,51802,0,College Park,Maryland,Reg Season,42,84,14,27,28,57
+2015,Michigan,BIG TEN,11,Y,Y,N,N,107601,521,Ann Arbor,Michigan,Reg Season,42,84,21,42,21,42
+2015,Ohio St,BIG TEN,9,Y,Y,Y,N,51802,0,College Park,Maryland,Reg Season,14,44,14,14,0,30
+2015,Indiana,BIG TEN,-,N,N,N,N,52929,621,Bloomington,Indiana,Reg Season,21,52,7,14,14,38
+2015,Rutgers,BIG TEN,-,N,N,N,N,52454,194,Piscataway,Rutgers,Reg Season,31,48,21,21,10,27
+2015,Georgia,SEC,5,Y,Y,Y,N,93246,606,Athens,Georgia,Reg Season,49,91,21,56,28,35
+2015,Michigan St,BIG TEN,22,Y,N,N,N,51802,0,College Park,Maryland,Reg Season,56,91,10,24,46,67
+2015,Wisconsin,BIG TEN,8,Y,Y,Y,N,67000,572,Indianapolis,BIG TEN Championship,Post Season,20,38,14,34,6,4
+2015,South Florida,BIG EAST,2,Y,Y,Y,Y,76468,1098,New Orleans,National Championship,Bowl Season,34,58,0,0,34,58
