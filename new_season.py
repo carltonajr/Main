@@ -4,6 +4,46 @@ import numpy as np
 import os
 import time
 
+
+def authenticate():
+    # Define your secure username and PIN
+    logins = pd.read_csv("C:/Users/E4D User/Documents/GitHub/Original/Charlotte Talons Data/db files/logins.csv",
+                         index_col='ID')
+    secure_pin = 2564
+    run = True
+    count = 0
+    while run:
+        # Ask the user for username
+        username_input = input("Please enter your username: ")
+        username_results = logins[logins['user'] == username_input]
+        usernames = list(username_results['user'])
+
+        if len(usernames) == 1:
+            password = usernames = list(username_results['password'])
+            password_input = input("Please enter your password: ")
+            if password_input != password[0]:
+                print("Unable to login, please see try again or admin for assistance.")
+            else:
+                print("Access granted! Welcome, {}.".format(username_input))
+                break
+        else:
+            print("Username not found, please input again")
+    #     print("Please input a value to continue to the next step:\n\n"
+    #           "1 - New Data Entry\n"
+    #           "2 - Season Analysis\n"
+    #           "3 - Sample Predictions")
+    #     while run:
+    #         next_task = int(input("Input: "))
+    #
+    #         if isinstance(next_task, int):
+    #             print(next_task)
+    #             break
+    #         else:
+    #             print("Answer provided was not acceptable.\n")
+
+# Example usage:
+authenticate()
+
 # new function
 def new_season_ingestion():
     # variable to hold the opponent names for verification while inserting new data
