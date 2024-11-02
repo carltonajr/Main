@@ -6,15 +6,19 @@ from bs4 import BeautifulSoup
 import requests
 from IPython.display import display
 from time import time
+from datetime import timedelta, datetime
+
 started = time()
 # Show all the columns in the dataframes below
 pd.set_option('display.max_columns', None)
-# list of the months games are played 
+# list of the months games are played
 months = ['october', 'november', 'december', 'january', 'february', 'march', 'april', 'may', 'june']
+calendar_month = [10, 11, 12, 1, 2, 3, 4, 5, 6]
 # create a numpy array to match the count of months, will be used as an indexer
 season_range = np.arange(0, 9)
 # create a dictionary from with the months list and matching numpy array
 season_dict = {key: months[key] for key in season_range}
+months_dict = {key: calendar_month [key] for key in season_range}
 print('Please enter a value to select a month from the season:\n{}'.format(season_dict))
 
 
@@ -36,13 +40,13 @@ def run_get_request(url):
 def create_url(month_value):
     # Display a message indicating which month's link is being created, with the month value capitalized
     display(f'Creating a link for the month of {month_value.capitalize()}')
-    
+
     # Construct the URL using the provided month value, formatted in lowercase for consistency in the link
     url = f'https://www.basketball-reference.com/leagues/NBA_2023_games-{month_value.lower()}.html'
-    
+
     # Display a clickable message showing the constructed URL and indicating the month and season it refers to
     display(f'Click to go  {url},' f' showing the month of {month_value.capitalize()} of the 2022-23 NBA Season')
-    
+
     # Return the constructed URL for further use
     return url
 
@@ -54,10 +58,11 @@ def season_search_by_key(input_key):
     input_key = int(input_key)
     # Check if the provided input_key exists in season_dict
     if input_key in list(season_dict.keys()):
-        display('The month selected: {}, {}'.format(input_key, season_dict[input_key]))
-        return season_dict[input_key]  # Return the matching key-value pair
+        display('The month selected: {}, {}, {}'.format(input_key, season_dict[input_key], calendar_month[input_key]))
+        return [input_key, season_dict[input_key], calendar_month[input_key]]  # Return the matching key-value pair
     else:
         raise ValueError("Input not found in range given.")
+
 
 # Define a function to find specific dates from the provided HTML data
 def find_dates(data, lookfor1, lookfor2):
@@ -74,6 +79,7 @@ def find_dates(data, lookfor1, lookfor2):
     # Return the formatted DataFrame containing the date information
     return df
 
+
 # Define a function to extract data from a dataset as a list
 def create_data_as_list(dataset):
     # Find all table data ('td') elements in the dataset
@@ -84,6 +90,7 @@ def create_data_as_list(dataset):
     new_data_as_list = list(new_data)
     # Return the list of extracted data
     return new_data_as_list
+
 
 # Define a function to extract and clean column names from the provided data
 def column_names(data):
@@ -96,8 +103,32 @@ def column_names(data):
     # Return the list of cleaned column names
     return list_names
 
+
+def create_df(value, num_of_elements):
+    num_rows = len(value) // num_of_elements
+    rows = []
+    for i in range(num_rows):
+        row = value[i * num_of_elements: (i + 1) * num_of_elements]
+        rows.append(row)
+    df = pd.DataFrame(rows)
+    return df
+
+
+def update_column_names(df, column, new_name):
+    df.rename(columns={column: new_name}, inplace=True)
+    return df
+
+
+def change_data_type(df, column, new_type):
+    df[column] = df[column].astype(new_type)
+    return df
+
+
 # Get the URL for the selected month by prompting the user to input a number
-selected_month_url = create_url(season_search_by_key(input("num: ")))
+selected_month = season_search_by_key(input("num: "))
+print(selected_month)
+
+selected_month_url = create_url(selected_month[1])
 
 # Run a GET request to retrieve the raw HTML data from the selected month's URL
 raw_data = run_get_request(selected_month_url)
@@ -107,9 +138,9 @@ display(raw_data)
 # Extract game dates from the raw data using specified tag and class
 game_dates = find_dates(raw_data, 'th', 'left')
 # Remove duplicate dates and reset the index for a cleaner DataFrame
-games_dates_cleaned = game_dates.drop_duplicates().reset_index().drop("index", axis=1)
+game_dates_cleaned = game_dates.drop_duplicates().reset_index().drop("index", axis=1)
 # Display the cleaned DataFrame containing unique game dates
-display(games_dates_cleaned)
+display(game_dates_cleaned)
 
 # Find the header elements in the raw data to use as column names
 headers = raw_data.find_all('thead')
@@ -123,12 +154,72 @@ clean_the_column_names = ['\xa0', 'notes', '', 'date']
 # Filter out the unwanted column names and keep the cleaned list of column names
 cleaned_columns = list(filter(lambda x: x not in clean_the_column_names, columns))
 # Display the final list of cleaned column names
-display(cleaned_columns)
+cleaned_columns[2] = 'away_pts'
+cleaned_columns[4] = 'home_pts'
 
 # Extract the main data for the new DataFrame using the cleaned column names
 data_for_new_df = create_data_as_list(raw_data)
 # Display the extracted data as a list
-display(data_for_new_df)
+display(len(data_for_new_df))
+
+values_to_remove = ['', 'Box Score', 'OT', '2OT', '3OT']
+data_for_new_df = list(filter(lambda x: x not in values_to_remove, data_for_new_df))
+display(len(data_for_new_df))
+
+
+standard_data = create_df(data_for_new_df, 8)
+standard_data.columns = cleaned_columns
+standard_data['start (et)'] = standard_data['start (et)'].str.replace('p', '', regex=False)
+# standard_data['24hr start'] = pd.to_datetime(standard_data['start (et)'], format='%I:%M %p')
+display(standard_data.head(25))
+
+display("All times are Eastern Standard Time.")
+game_dates['len. of game'] = standard_data['log']
+game_dates['start_time'] = standard_data['start (et)']
+game_dates = change_data_type(game_dates, 'weekday', 'string')
+game_dates = change_data_type(game_dates, 'date', 'string')
+game_dates = change_data_type(game_dates, 'year', 'int')
+game_dates = change_data_type(game_dates, 'len. of game', 'string')
+print(game_dates.dtypes)
+
+
+def create_date_time():
+    class DateOfGame:
+        def __init__(self, day, month, year, hour, minute):
+            self.day = day
+            self.month = month
+            self.year = year
+            self.hour = hour
+            self.minute = minute
+
+    dates = []
+    # %Y-%m-%dT%H:%M:%S
+    for lab, row in game_dates.iterrows():
+        print(row)
+        date_split = row['date'].split(' ')
+        start_time_split = row['start_time'].split(':')
+        hour, minutes = int(start_time_split[0]) + 12, int(start_time_split[1])
+        print(hour, minutes)
+        date_num = int(date_split[2])
+        select_day = DateOfGame(date_num, selected_month[2], row['year'], hour, minutes)
+        as_datetime = datetime(select_day.year, select_day.month, select_day.day, select_day.hour, select_day.minute)
+        print(as_datetime)
+        dates.append(as_datetime)
+    return dates
+
+
+date_times = create_date_time()
+standard_data['calendar_info'] = date_times
+print(standard_data.head())
+display(standard_data.info())
+breakpoint()
+
+standard_data['attend.'] = standard_data['attend.'].str.replace(',', '')
+standard_data = change_data_type(standard_data, 'attend.', 'int')
+standard_data = change_data_type(standard_data, 'home_pts', 'int')
+standard_data = change_data_type(standard_data, 'away_pts', 'int')
+standard_data = change_data_type(standard_data, 'visitor/neutral', 'string')
+standard_data = change_data_type(standard_data, 'home/neutral', 'string')
 
 
 finished = time()
@@ -138,21 +229,20 @@ tot_time = (finished - started)
 # Print the formatted start time in hours, minutes, and seconds
 print("Started running at {}".format(
     str(int(((started % 3600) / 120))) + ":" +  # Calculate and format the hours part
-    str(int((started % 3600) / 60)) + ":" +    # Calculate and format the minutes part
-    str(int((started % 3600) % 60))            # Calculate and format the seconds part
+    str(int((started % 3600) / 60)) + ":" +  # Calculate and format the minutes part
+    str(int((started % 3600) % 60))  # Calculate and format the seconds part
 ))
 
 # Print the formatted finish time in hours, minutes, and seconds
 print("Finished running at {}".format(
     str(int(((finished % 3600) / 120))) + ":" +  # Calculate and format the hours part
-    str(int((finished % 3600) / 60)) + ":" +     # Calculate and format the minutes part
-    str(int((finished % 3600) % 60))             # Calculate and format the seconds part
+    str(int((finished % 3600) / 60)) + ":" +  # Calculate and format the minutes part
+    str(int((finished % 3600) % 60))  # Calculate and format the seconds part
 ))
 
 # Print the total elapsed runtime formatted in hours, minutes, and seconds
-print("\n** Total Elapsed Runtime:", 
-    str(int((tot_time / 3600))) + ":" +          # Calculate and format the total hours part
-    str(int((tot_time % 3600) / 60)) + ":" +     # Calculate and format the total minutes part
-    str(int((tot_time % 3600) % 60))             # Calculate and format the total seconds part
-)
-
+print("\n** Total Elapsed Runtime:",
+      str(int((tot_time / 3600))) + ":" +  # Calculate and format the total hours part
+      str(int((tot_time % 3600) / 60)) + ":" +  # Calculate and format the total minutes part
+      str(int((tot_time % 3600) % 60))  # Calculate and format the total seconds part
+      )
