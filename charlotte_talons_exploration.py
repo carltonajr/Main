@@ -42,21 +42,6 @@ for i in data_years:
 
 
 
-def scoring_results(values, values_2):
-    """Calculate the point spread from each game through subtracting
-    opponent scores from the team scores
-
-    Args:
-        values: Team score value
-        values_2: opponent score value
-
-    Returns:
-        Difference of the 2 values, stored in a DataFrame"""
-    point_spread = values - values_2
-    return pd.DataFrame(point_spread)
-
-
-
 def game_win_loss(values):
     """Assign win or loss based on the value
 
