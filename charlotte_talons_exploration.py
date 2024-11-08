@@ -40,18 +40,6 @@ for i in data_years:
 
 # -choose_year - Choose a season from 'available_years' to select the data from that season
 
-def new_dataframe(values, values2):
-    """Use concatenation to merge uploaded data.
-    
-    Args:
-        values: 1st Dataset
-        values_2: Data to be merged
-    
-    Returns:
-        Full dataset with new data added.
-    """
-    dataset = pd.concat([values, values2])
-    return dataset
 
 
 def scoring_results(values, values_2):
