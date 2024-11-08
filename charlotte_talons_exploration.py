@@ -6,12 +6,7 @@ import seaborn as sns
 # Input data files are available in the read-only "../input/" directory
 # For example, running this (by clicking run or pressing Shift+Enter) will list all files under the input directory
 pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
-
-import os
-for dirname, _, filenames in os.walk('/kaggle/input'):
-    for filename in filenames:
-        print(os.path.join(dirname, filename))
+pd.set_option('display.max_columns', None
 
 # Define preferences for plotting later on
 talons_color = '#87D5FF'
@@ -19,7 +14,7 @@ opps_color = '#FF3E00'
 plt.figure(figsize=(15, 6))
 
 data_years = np.arange(2028, 2043)
-for i in  data_years:
+for i in data_years:
     path = f'/kaggle/input/2035-season/Charlotte Talons {i} Season.csv'
     print(i)
 
