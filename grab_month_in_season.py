@@ -9,6 +9,48 @@ from time import time
 from datetime import timedelta, datetime
 
 started = time()
+
+
+def files_in_folder(folder_path):
+    # define 'files' as a global variable for use outside the function
+    global files
+    # change the backslashes to forward slashes in the folder path
+    folder_path = folder_path.replace('"', '').replace(r"\\", r"/")
+    # A 'try:' statement is used to handle exceptions and errors that might occur within
+    # its block
+    try:
+        # Select the files as a list from the folder given by the path
+        files = os.listdir(folder_path)
+
+        # Filter out files specifically not other directories using a single line for loop
+        files = [file for file in files if os.path.isfile(os.path.join(folder_path, file))]
+
+        # Now count the number of files selected by way of 'len()' to see how long the list is
+        num_of_files = len(files)
+        # Finding the file names 'if' the list length is greater than 0
+        display(f"Files found:{num_of_files} in {folder_path}\n")
+        # Print files found
+        display("Files located:")
+        # For loop to iterate over each element in the list
+        for name in files:
+            # Print the name of the file found
+            display(name)
+        # Else statement that changes 'files' to a dataframe for folders with more than 15 files
+        else:
+            # Original  message
+            display(f"Files found:{num_of_files} in {folder_path}\n")
+            # Turn 'files' into a dataframe with 'num_of_files' as the index column
+            files = pd.DataFrame({num_of_files: files})
+            # Rename column with file names to 'file_name'
+            files.columns = ['file_name']
+            # print the 1st five rows of the dataframe 'files'
+            display(files)
+    # Use an 'except' to give a result of an error message that no files were found
+    except FileNotFoundError:
+        # Print the message
+        display(f"No files found in {folder_path}")
+
+
 # Show all the columns in the dataframes below
 pd.set_option('display.max_columns', None)
 # list of the months games are played
