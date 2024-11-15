@@ -1,3 +1,5 @@
+# Reads a txt file that has a  script for each month.
+
 import numpy as np  # linear algebra
 import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
 # import webbrowser
@@ -225,7 +227,13 @@ game_dates = change_data_type(game_dates, 'len. of game', 'string')
 print(game_dates.dtypes)
 
 
-def create_date_time():
+month = execute()
+files_in_folder("folder path")
+new_csv = pd.read_csv("new file path")
+print(new_csv.tail())
+
+
+def create_date_time(df):
     class DateOfGame:
         def __init__(self, day, month, year, hour, minute):
             self.day = day
@@ -236,32 +244,25 @@ def create_date_time():
 
     dates = []
     # %Y-%m-%dT%H:%M:%S
-    for lab, row in game_dates.iterrows():
-        print(row)
+    for lab, row in df.iterrows():
         date_split = row['date'].split(' ')
-        start_time_split = row['start_time'].split(':')
+        start_time_split = row['start (et)'].split(':')
         hour, minutes = int(start_time_split[0]) + 12, int(start_time_split[1])
-        print(hour, minutes)
         date_num = int(date_split[2])
-        select_day = DateOfGame(date_num, selected_month[2], row['year'], hour, minutes)
-        as_datetime = datetime(select_day.year, select_day.month, select_day.day, select_day.hour, select_day.minute)
-        print(as_datetime)
-        dates.append(as_datetime)
-    return dates
+        select_day = DateOfGame(date_num, month[2], row['year'], hour, minutes)
+        as_datetime = datetime(select_day.year, select_day.month, select_day.day, select_day.hour,
+                               select_day.minute)
+        dates.append(as_datetime.isoformat())
+    iso_dates = pd.DataFrame(dates)
+    print(iso_dates)
+    return iso_dates
 
 
-date_times = create_date_time()
-standard_data['calendar_info'] = date_times
-print(standard_data.head())
-display(standard_data.info())
+new_csv['calendar_info'] = create_date_time(new_csv)
+print(new_csv.tail())
+print(new_csv.info())
 breakpoint()
-
-standard_data['attend.'] = standard_data['attend.'].str.replace(',', '')
-standard_data = change_data_type(standard_data, 'attend.', 'int')
-standard_data = change_data_type(standard_data, 'home_pts', 'int')
-standard_data = change_data_type(standard_data, 'away_pts', 'int')
-standard_data = change_data_type(standard_data, 'visitor/neutral', 'string')
-standard_data = change_data_type(standard_data, 'home/neutral', 'string')
+# new_csv.to_csv("C:/Users/E4D User/Documents/GitHub/Original/2022 Season Scripts/temp_month_save.csv")
 
 
 finished = time()
