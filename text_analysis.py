@@ -11,7 +11,6 @@ songs = songs.fillna("no feature")
 
 
 sample = songs.sample(n=3, replace=False)
-# Sample movie reviews — you can replace these with real ones
 songs_select = []
 reviews = []
 
@@ -43,4 +42,5 @@ plt.axhline(0, color='black', linestyle='--')
 plt.title("Sentiment Polarity of Movie Reviews")
 plt.xlabel("Review Index")
 plt.ylabel("Polarity (-1 = negative, 1 = positive)")
+
 plt.show()
