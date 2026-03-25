@@ -15,6 +15,7 @@ songs_select = []
 reviews = []
 
 
+# Input lyrics from selected song from the sample above.
 def populate():
     for i in sample['title']:
         songs_select.append(i)
@@ -27,7 +28,7 @@ def populate():
 
 populate()
 breakpoint()
-# Analyze sentiment
+# Analyze sentiment of the lyrics given.
 polarities = []
 for review in reviews:
     blob = TextBlob(review)
@@ -35,7 +36,7 @@ for review in reviews:
     polarities.append(polarity)
     print(f"Review: {review}\nPolarity Score: {polarity}\n")
 
-# Visualization
+# Visualization with a bar plot.
 plt.figure(figsize=(10, 5))
 plt.bar(songs_select, polarities, color='skyblue')
 plt.axhline(0, color='black', linestyle='--')
